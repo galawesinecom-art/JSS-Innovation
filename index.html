@@ -6,40 +6,183 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JSS INNOVATIONS (PTY) LTD</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        :root { --primary-color: #0f172a; --brand-red: #ce1212; --text-dark: #334155; --bg-light: #f8fafc; --white: #ffffff; }
-        body { background-color: var(--bg-light); color: var(--text-dark); line-height: 1.6; }
+        /* Reset and Multi-Sector Variables */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
         
-        /* Fixed Header Layout */
-        .top-bar { background-color: var(--white); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 4px solid var(--brand-red); flex-wrap: wrap; }
-        .logo-area { font-size: 1.5rem; font-weight: 900; color: var(--primary-color); display: flex; align-items: center; }
-        .logo-area span { color: var(--brand-red); margin-left: 5px; }
-        .logo-img { height: 50px; width: auto; margin-right: 15px; }
-        .sub-tag { font-size: 0.75rem; display: block; text-transform: uppercase; font-weight: bold; color: #64748b; letter-spacing: 1px; margin-top: 2px; }
-        
-        /* Navigation & Sections */
-        nav { background-color: var(--primary-color); position: sticky; top: 0; z-index: 100; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); width: 100%; }
+        :root {
+            --primary-color: #0f172a;  /* Heavy Industrial Navy */
+            --brand-red: #ce1212;     /* Corporate Crimson Accent */
+            --text-dark: #334155;
+            --bg-light: #f8fafc;
+            --white: #ffffff;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Top Brand Header Bar */
+        .top-bar {
+            background-color: var(--white);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 4px solid var(--brand-red);
+        }
+
+        .top-bar .logo-area {
+            font-size: 1.6rem;
+            font-weight: 900;
+            letter-spacing: 1px;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+        }
+
+        .top-bar .logo-area span {
+            color: var(--brand-red);
+        }
+
+        .top-bar .sub-tag {
+            font-size: 0.75rem;
+            display: block;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #64748b;
+            letter-spacing: 2px;
+            margin-top: 2px;
+        }
+
+        /* Structured Navigation Menu */
+        nav {
+            background-color: var(--primary-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+            width: 100%;
+        }
+
         .menu-checkbox { display: none; }
-        .menu-icon { display: none; cursor: pointer; }
-        nav ul { display: flex; list-style: none; max-width: 1200px; margin: 0 auto; }
+
+        .menu-icon {
+            display: none;
+            cursor: pointer;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
         nav ul li { position: relative; }
-        nav ul li a { display: block; padding: 1.2rem 1.5rem; color: #f1f5f9; text-decoration: none; font-weight: 600; font-size: 0.95rem; }
-        nav ul li a:hover { background-color: var(--brand-red); }
-        .dropdown { display: none; position: absolute; background-color: var(--white); min-width: 200px; z-index: 200; border-top: 3px solid var(--brand-red); }
-        .dropdown li a { color: var(--primary-color); padding: 0.9rem; border-bottom: 1px solid #e2e8f0; font-size: 0.9rem; }
+
+        nav ul li a {
+            display: block;
+            padding: 1.2rem 1.5rem;
+            color: #f1f5f9;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+        }
+
+        nav ul li a:hover, nav ul li:hover > a {
+            background-color: var(--brand-red);
+            color: var(--white);
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: var(--white);
+            min-width: 260px;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+            border-top: 3px solid var(--brand-red);
+            z-index: 200;
+        }
+
+        .dropdown li a {
+            color: var(--primary-color);
+            padding: 0.9rem 1.2rem;
+            border-bottom: 1px solid #e2e8f0;
+            font-size: 0.9rem;
+        }
+
         nav ul li:hover .dropdown { display: block; }
-        
-        header { background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.95)), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=80') no-repeat center/cover; color: var(--white); height: 50vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 1.5rem; }
+
+        header {
+            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.95)), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            color: var(--white);
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 1.5rem;
+        }
+
+        header h1 { font-size: 2.6rem; margin-bottom: 1rem; font-weight: 800; letter-spacing: 1px; }
+
+        header p { font-size: 1.2rem; max-width: 800px; color: #cbd5e1; font-weight: 300; }
+
         .container { max-width: 1200px; margin: 0 auto; padding: 4rem 1.5rem; }
+
+        h2.section-title { font-size: 2rem; text-align: center; margin-bottom: 3rem; color: var(--primary-color); text-transform: uppercase; position: relative; }
+
+        h2.section-title::after { content: ''; display: block; width: 80px; height: 4px; background-color: var(--brand-red); margin: 10px auto 0 auto; }
+
+        .vision-box { background: var(--white); padding: 3rem 2rem; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); border-left: 6px solid var(--brand-red); margin-bottom: 4rem; }
+
+        .idea-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+
+        .idea-pillar { background: var(--bg-light); padding: 1.5rem; border-radius: 6px; border-top: 3px solid var(--primary-color); }
+
         .sector-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-        .sector-card { background: var(--white); border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-bottom: 4px solid #cbd5e1; padding: 1.5rem; }
-        footer { background-color: #0b0f19; color: #94a3b8; padding: 3rem 2rem; text-align: center; border-top: 5px solid var(--brand-red); font-size: 0.85rem; }
+
+        .sector-card { background: var(--white); border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); border-bottom: 4px solid #cbd5e1; transition: transform 0.3s; text-decoration: none; color: inherit; display: block; }
+
+        .sector-card:hover { transform: translateY(-5px); border-bottom-color: var(--brand-red); }
+
+        .sector-img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
+
+        .sector-content { padding: 1.5rem; }
+
+        .social-container { display: flex; gap: 1rem; margin-top: 1rem; justify-content: center; }
+
+        .social-btn { display: inline-flex; justify-content: center; align-items: center; width: 42px; height: 42px; background-color: var(--brand-red); color: var(--white); border-radius: 4px; text-decoration: none; font-weight: bold; }
+
+        footer { background-color: #0b0f19; color: #94a3b8; padding: 4rem 2rem 2rem 2rem; text-align: center; border-top: 5px solid var(--brand-red); }
+
+        .footer-compliance { max-width: 1000px; margin: 0 auto 3rem auto; display: flex; justify-content: space-around; flex-wrap: wrap; gap: 2rem; border-bottom: 1px solid #1e293b; padding-bottom: 3rem; }
+
+        .cert-stamp { border: 2px solid #334155; padding: 1rem; border-radius: 50%; width: 110px; height: 110px; display: flex; flex-direction: column; justify-content: center; align-items: center; font-size: 0.7rem; font-weight: bold; color: #f1f5f9; background-color: #111827; }
+
+        .cert-stamp span { color: var(--brand-red); font-size: 0.85rem; margin-top: 2px; }
+
+        .association-logo { font-weight: 800; color: #cbd5e1; border-left: 3px solid var(--brand-red); padding-left: 10px; font-size: 1.1rem; letter-spacing: 1px; }
+
+        .footer-details { font-size: 0.85rem; line-height: 1.8; }
 
         @media (max-width: 768px) {
-            .top-bar { flex-direction: column; text-align: center; }
+            .top-bar { flex-direction: column; text-align: center; gap: 0.75rem; padding: 1rem; }
             .menu-icon { display: flex; flex-direction: column; justify-content: space-between; width: 30px; height: 20px; position: absolute; top: 15px; right: 20px; z-index: 150; }
-            .menu-icon span { display: block; height: 3px; width: 100%; background-color: #ffffff; border-radius: 2px; }
-            nav ul { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background-color: #111827; }
+            .menu-icon span { display: block; height: 3px; width: 100%; background-color: #ffffff !important; border-radius: 2px; transition: all 0.3s ease; }
+            nav ul { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background-color: #111827; border-top: 3px solid var(--brand-red); }
             .menu-checkbox:checked ~ ul { display: flex !important; }
         }
     </style>
@@ -49,13 +192,13 @@
     <div class="top-bar">
         <div>
             <div class="logo-area">
-                <img src="logo.png" alt="Logo" class="logo-img">
+                <img src="logo.png" alt="JSS Innovations Logo" style="height: 60px; vertical-align: middle; margin-right: 15px;">
                 JSS <span>INNOVATIONS</span>
             </div>
             <span class="sub-tag">Process Systems & Infrastructure Engineering</span>
         </div>
         <div style="text-align: right; font-size: 0.9rem; font-weight: 600; color: var(--primary-color);">
-            🏢 CIPC COMPLIANT | 📈 B-BBEE Level 1
+            🏢 CIPC COMPLIEMT | 📈 B-BBEE Level 1
         </div>
     </div>
 
@@ -67,37 +210,92 @@
             <li><a href="#">Our Business ▾</a>
                 <ul class="dropdown">
                     <li><a href="about.html">About Us</a></li>
-                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="team.html">Our Team (Board)</a></li>
+                    <li><a href="certificates.html">Certificates & Quality</a></li>
                 </ul>
             </li>
             <li><a href="#">Our Offering ▾</a>
                 <ul class="dropdown">
-                    <li><a href="civils.html">General Construction</a></li>
-                    <li><a href="water.html">Water & Effluent</a></li>
-                    <li><a href="lab.html">Lab Compliance</a></li>
+                    <li><a href="civils.html">General Construction & Civils</a></li>
+                    <li><a href="water.html">Water & Effluent Solutions</a></li>
+                    <li><a href="lab.html">Quality & Lab Compliance</a></li>
                 </ul>
             </li>
             <li><a href="#contact">Contact Us</a></li>
+            <li><a href="terms.html">Terms & Conditions</a></li>
         </ul>
     </nav>
 
-    <header>
+    <header id="home">
         <h1>Engineering the Future with Precision</h1>
+        <p>Providing multi-sector industrial solutions across civil infrastructure, mechanical fluids management, and technical regulatory compliance frameworks.</p>
     </header>
 
-    <section class="container">
-        <div class="sector-grid">
-            <div class="sector-card">
-                <h3>Process Systems & Infrastructure</h3>
-                <p>Providing high-precision industrial engineering solutions.</p>
+    <section class="container" style="padding-bottom: 1rem;">
+        <div class="vision-box">
+            <h3>Our Strategic Vision</h3>
+            <p style="font-size: 1.1rem; color: var(--text-dark); font-weight: 400;">
+                To become South Africa's most precise multi-disciplinary contractor by deploying scientific process controls and engineering excellence to public infrastructure and commercial production assets.
+            </p>
+            <div class="idea-grid">
+                <div class="idea-pillar">
+                    <h4>The Business Idea</h4>
+                    <p style="font-size: 0.9rem;">Bridging the gap between traditional civil contracting and highly technical process engineering to offer public and private sectors an all-in-one execution partner.</p>
+                </div>
+                <div class="idea-pillar">
+                    <h4>Resource Circularity</h4>
+                    <p style="font-size: 0.9rem;">Optimizing industrial spaces with a focus on advanced water recovery, maximizing process fluid lifecycles, and mitigating environmental impact footprints.</p>
+                </div>
+                <div class="idea-pillar">
+                    <h4>Empowered Precision</h4>
+                    <p style="font-size: 0.9rem;">Leveraging an agile, 100% black-owned Level 1 B-BBEE framework built entirely on verified standard operating safety and technical testing metrics.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2026 JSS INNOVATIONS. All rights reserved.</p>
-        <p>Reg: 2026/534174/07</p>
-    </footer>
+    <section id="offerings" class="container" style="padding-top: 1rem;">
+        <h2 class="section-title">Our Key Enterprise Offerings</h2>
+        <div class="sector-grid">
+            <a href="civils.html" class="sector-card">
+                <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=600&q=80" alt="Civil Works Infrastructure" class="sector-img">
+                <div class="sector-content">
+                    <h3>General Construction & Civils</h3>
+                    <p>Executing structural projects, active site management, and infrastructural installations built safely to specialized mechanical and civil layouts.</p>
+                </div>
+            </a>
+            <a href="water.html" class="sector-card">
+                <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80" alt="Effluent Treatment Plant Engineering" class="sector-img">
+                <div class="sector-content">
+                    <h3>Water & Effluent Solutions</h3>
+                    <p>Specialized engineering of active plant hydraulics, high-capacity effluent treatment utilities, fluid separation architectures, and strict ecological compliance.</p>
+                </div>
+            </a>
+            <a href="lab.html" class="sector-card">
+                <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=600&q=80" alt="Quality Operations Control" class="sector-img">
+                <div class="sector-content">
+                    <h3>Quality & Lab Compliance</h3>
+                    <p>Setting standard operating workflows, laboratory parameter logs, quality auditing strategies, and high-precision technical testing oversight.</p>
+                </div>
+            </a>
+        </div>
+    </section>
 
+    <footer id="compliance">
+        <div class="footer-compliance">
+            <div class="cert-stamp">QUALITY<span>ISO 9001</span></div>
+            <div class="cert-stamp">ENVIRON<span>ISO 14001</span></div>
+            <div class="cert-stamp">SAFETY<span>ISO 45001</span></div>
+            <div class="association-logo">MEMBER OF SAFCEC</div>
+            <div class="association-logo">SAQI COMPLIANT</div>
+        </div>
+        <div class="footer-details">
+            <p style="color: #f1f5f9; font-weight: bold; margin-bottom: 0.5rem;">JSS INNOVATIONS (PTY) LTD</p>
+            <p><strong>Registered Address:</strong> 17150 Geba Street, Kagiso, Krugersdorp, Gauteng, 1754</p>
+            <p><strong>Corporate Registration:</strong> | <strong>Income Tax No:</strong> </p>
+            <p style="margin-top: 1rem;"><a href="terms.html" style="color: var(--brand-red); text-decoration: underline; font-weight: 600;">Terms & Conditions</a></p>
+            <p style="margin-top: 2rem; color: #475569; font-size: 0.8rem;">&copy; 2026 JSS INNOVATIONS. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
