@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General Construction & Civils - JSS INNOVATIONS</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        :root { --primary-color: #0f172a; --brand-red: #ce1212; --text-dark: #334155; --bg-light: #f8fafc; --white: #ffffff; }
+        body { background-color: var(--bg-light); color: var(--text-dark); line-height: 1.6; }
+        
+        .top-bar { background-color: var(--white); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 4px solid var(--brand-red); }
+        .top-bar .logo-area { font-size: 1.6rem; font-weight: 900; color: var(--primary-color); }
+        .top-bar .logo-area span { color: var(--brand-red); }
+        .top-bar .sub-tag { font-size: 0.75rem; display: block; text-transform: uppercase; font-weight: bold; color: #64748b; letter-spacing: 2px; }
+        
+        nav { background-color: var(--primary-color); position: sticky; top: 0; z-index: 100; width: 100%; }
+        .menu-checkbox { display: none; }
+        .menu-icon { display: none; cursor: pointer; }
+        nav ul { display: flex; list-style: none; max-width: 1200px; margin: 0 auto; width: 100%; }
+        nav ul li { position: relative; }
+        nav ul li a { display: block; padding: 1.2rem 1.5rem; color: #f1f5f9; text-decoration: none; font-weight: 600; font-size: 0.95rem; }
+        nav ul li a:hover { background-color: var(--brand-red); }
+        .dropdown { display: none; position: absolute; top: 100%; left: 0; background-color: var(--white); min-width: 260px; border-top: 3px solid var(--brand-red); box-shadow: 0 10px 15px rgba(0,0,0,0.1); }
+        .dropdown li a { color: var(--primary-color); border-bottom: 1px solid #e2e8f0; }
+        nav ul li:hover .dropdown { display: block; }
+
+        .page-hero { background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.95)), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover; color: var(--white); padding: 5rem 1.5rem; text-align: center; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 4rem 1.5rem; }
+        
+        .service-section { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-bottom: 4rem; }
+        .service-section.reverse { grid-template-columns: 1fr 1fr; }
+        .service-img { width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); display: block; }
+        .service-content h2 { color: var(--primary-color); margin-bottom: 1rem; font-size: 2rem; }
+        .service-content h2::after { content: ''; display: block; width: 50px; height: 3px; background: var(--brand-red); margin-top: 8px; }
+
+        footer { background-color: #0b0f19; color: #94a3b8; padding: 3rem 2rem; text-align: center; border-top: 5px solid var(--brand-red); margin-top: 5rem; }
+
+        @media (max-width: 768px) {
+            .top-bar { flex-direction: column; text-align: center; gap: 0.75rem; }
+            .service-section, .service-section.reverse { grid-template-columns: 1fr; gap: 2rem; }
+            nav { position: relative; min-height: 50px; }
+            .menu-icon { display: flex; flex-direction: column; justify-content: space-between; width: 30px; height: 20px; position: absolute; top: 15px; right: 20px; }
+            .menu-icon span { display: block; height: 3px; width: 100%; background-color: #fff; }
+            nav ul { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; background-color: #111827; }
+            .dropdown { position: relative; display: block; background-color: #1e293b; box-shadow: none; }
+            .dropdown li a { color: #cbd5e1; padding-left: 2.5rem; }
+            .menu-checkbox:checked ~ ul { display: flex; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Cleaned Header (No more CIPC compliant tag) -->
+    <div class="top-bar">
+        <div>
+            <div class="logo-area">JSS <span>INNOVATIONS</span></div>
+            <span class="sub-tag">Process Systems & Infrastructure Engineering</span>
+        </div>
+    </div>
+
+    <nav>
+        <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+        <label for="menu-toggle" class="menu-icon"><span></span><span></span><span></span></label>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Our Business ▾</a>
+                <ul class="dropdown">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Our Offering ▾</a>
+                <ul class="dropdown">
+                    <li><a href="civils.html">General Construction & Civils</a></li>
+                    <li><a href="water.html">Water & Effluent Solutions</a></li>
+                    <li><a href="lab.html">Quality & Lab Compliance</a></li>
+                </ul>
+            </li>
+            <li><a href="index.html#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="page-hero">
+        <h1>General Construction & Civils</h1>
+        <p style="margin-top: 1rem; color: #cbd5e1;">Delivering robust civil frameworks and infrastructure solutions with structural longevity.</p>
+    </div>
+
+    <div class="container">
+        <div class="service-section">
+            <div class="service-content">
+                <h2>Township Infrastructure Development</h2>
+                <p style="margin-top: 1rem;">We execute comprehensive bulk infrastructure programs for private developers and public frameworks. Our active site operations span raw earthworks, structured heavy excavations, layout stabilization, and systematic platform readiness for large-scale engineering installations.</p>
+            </div>
+            <div>
+                <!-- Swapped out the old broken URL with the working construction asset link -->
+                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80" alt="Township Infrastructure" class="service-img">
+            </div>
+        </div>
+
+        <div class="service-section reverse">
+            <div>
+                <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=600&q=80" alt="Road Surfacing" class="service-img">
+            </div>
+            <div class="service-content">
+                <h2>Gravel to Surfaced Roads</h2>
+                <p style="margin-top: 1rem;">Specialized deployment of heavy compaction assets and high-grade structural layering. We handle asphalt upgrades, thorough geometric levelling, concrete alignment systems, and long-form arterial surfacing optimized to weather tough industrial load transport profiles over time.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 JSS INNOVATIONS (PTY) LTD. All rights reserved.</p>
+    </footer>
+</body>
+</html>

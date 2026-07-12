@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSS INNOVATIONS (PTY) LTD</title>
+    <style>
+        /* Reset and Multi-Sector Variables */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        :root {
+            --primary-color: #0f172a;  /* Heavy Industrial Navy */
+            --brand-red: #ce1212;     /* Corporate Crimson Accent */
+            --text-dark: #334155;
+            --bg-light: #f8fafc;
+            --white: #ffffff;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Top Brand Header Bar */
+        .top-bar {
+            background-color: var(--white);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 4px solid var(--brand-red);
+        }
+
+        .top-bar .logo-area {
+            font-size: 1.6rem;
+            font-weight: 900;
+            letter-spacing: 1px;
+            color: var(--primary-color);
+        }
+
+        .top-bar .logo-area span {
+            color: var(--brand-red);
+        }
+
+        .top-bar .sub-tag {
+            font-size: 0.75rem;
+            display: block;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #64748b;
+            letter-spacing: 2px;
+            margin-top: -2px;
+        }
+
+        /* Structured Navigation Menu */
+        nav {
+            background-color: var(--primary-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+            width: 100%;
+        }
+
+        /* Hide the mobile checkbox trick by default */
+        .menu-checkbox {
+            display: none;
+        }
+
+        /* Default desktop styles for the menu icon container */
+        .menu-icon {
+            display: none;
+            cursor: pointer;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 1.2rem 1.5rem;
+            color: #f1f5f9;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+        }
+
+        nav ul li a:hover, nav ul li:hover > a {
+            background-color: var(--brand-red);
+            color: var(--white);
+        }
+
+        /* Dropdown Sub-menus (Desktop) */
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: var(--white);
+            min-width: 260px;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+            border-top: 3px solid var(--brand-red);
+            z-index: 200;
+        }
+
+        .dropdown li a {
+            color: var(--primary-color);
+            padding: 0.9rem 1.2rem;
+            border-bottom: 1px solid #e2e8f0;
+            font-size: 0.9rem;
+        }
+
+        .dropdown li a:hover {
+            background-color: #f8fafc;
+            color: var(--brand-red);
+        }
+
+        nav ul li:hover .dropdown {
+            display: block;
+        }
+
+        /* Industrial Hero Banner */
+        header {
+            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.95)), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            color: var(--white);
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 1.5rem;
+        }
+
+        header h1 {
+            font-size: 2.6rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            color: #cbd5e1;
+            font-weight: 300;
+        }
+
+        /* Container & Grid Elements */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem;
+        }
+
+        h2.section-title {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            position: relative;
+        }
+
+        h2.section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: var(--brand-red);
+            margin: 10px auto 0 auto;
+        }
+
+        /* Vision Section Layout */
+        .vision-box {
+            background: var(--white);
+            padding: 3rem 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            border-left: 6px solid var(--brand-red);
+            margin-bottom: 4rem;
+        }
+
+        .vision-box h3 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .idea-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .idea-pillar {
+            background: var(--bg-light);
+            padding: 1.5rem;
+            border-radius: 6px;
+            border-top: 3px solid var(--primary-color);
+        }
+
+        .idea-pillar h4 {
+            color: var(--brand-red);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        /* Sector Grid Cards */
+        .sector-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .sector-card {
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            border-bottom: 4px solid #cbd5e1;
+            transition: transform 0.3s, border-color 0.3s;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .sector-card:hover {
+            transform: translateY(-5px);
+            border-bottom-color: var(--brand-red);
+        }
+
+        .sector-img {
+            width: 100%;
+            aspect-ratio: 16 / 10;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+
+        .sector-content {
+            padding: 1.5rem;
+        }
+
+        .sector-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.75rem;
+            font-size: 1.3rem;
+        }
+
+        /* Social Channels Layout */
+        .social-container {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+            justify-content: center;
+        }
+
+        .social-btn {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 42px;
+            height: 42px;
+            background-color: var(--brand-red);
+            color: var(--white);
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: opacity 0.2s;
+        }
+
+        .social-btn:hover {
+            opacity: 0.85;
+        }
+
+        /* Compliance Framework Branding Footer */
+        footer {
+            background-color: #0b0f19;
+            color: #94a3b8;
+            padding: 4rem 2rem 2rem 2rem;
+            text-align: center;
+            border-top: 5px solid var(--brand-red);
+        }
+
+        .footer-compliance {
+            max-width: 1000px;
+            margin: 0 auto 3rem auto;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            border-bottom: 1px solid #1e293b;
+            padding-bottom: 3rem;
+        }
+
+        .cert-stamp {
+            border: 2px solid #334155;
+            padding: 1rem;
+            border-radius: 50%;
+            width: 110px;
+            height: 110px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.7rem;
+            font-weight: bold;
+            color: #f1f5f9;
+            background-color: #111827;
+        }
+
+        .cert-stamp span {
+            color: var(--brand-red);
+            font-size: 0.85rem;
+            margin-top: 2px;
+        }
+
+        .association-logo {
+            font-weight: 800;
+            color: #cbd5e1;
+            border-left: 3px solid var(--brand-red);
+            padding-left: 10px;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+        }
+
+        .footer-details {
+            font-size: 0.85rem;
+            line-height: 1.8;
+        }
+
+        /* Mobile Optimization with Dropdown Hamburger Menu */
+        @media (max-width: 768px) {
+            .top-bar {
+                flex-direction: column;
+                text-align: center;
+                gap: 0.75rem;
+                padding: 1rem;
+            }
+            
+            .top-bar div[style*="text-align: right"] {
+                text-align: center !important;
+            }
+            
+            nav {
+                position: relative;
+                display: block;
+                min-height: 50px;
+            }
+
+            /* Explicit structure for mobile button container */
+            .menu-icon {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 30px;
+                height: 20px;
+                position: absolute;
+                top: 15px;
+                right: 20px;
+                z-index: 150;
+            }
+
+            .menu-icon span {
+                display: block;
+                height: 3px;
+                width: 100%;
+                background-color: #ffffff !important;
+                border-radius: 2px;
+                transition: all 0.3s ease;
+            }
+
+            /* Main navigation items container on mobile */
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: #111827;
+                box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+                border-top: 3px solid var(--brand-red);
+                padding: 0;
+            }
+
+            nav ul li {
+                width: 100%;
+                border-bottom: 1px solid #1e293b;
+            }
+
+            nav ul li a {
+                padding: 1.2rem 1.5rem;
+            }
+
+            /* Flatten sub-dropdown items directly into mobile list hierarchy */
+            .dropdown {
+                position: relative;
+                width: 100%;
+                display: block;
+                border: none;
+                box-shadow: none;
+                background-color: #1e293b;
+                top: 0;
+            }
+
+            .dropdown li a {
+                color: #cbd5e1;
+                padding-left: 2.5rem;
+                border-bottom: 1px solid #334155;
+            }
+
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            /* Show menu layout explicitly when checkbox is selected */
+            .menu-checkbox:checked ~ ul {
+                display: flex !important;
+            }
+
+            /* CSS Transformation: Animate 3 lines into an 'X' */
+            .menu-checkbox:checked ~ .menu-icon span:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+            }
+            .menu-checkbox:checked ~ .menu-icon span:nth-child(2) {
+                opacity: 0;
+            }
+            .menu-checkbox:checked ~ .menu-icon span:nth-child(3) {
+                transform: translateY(-9px) rotate(-45deg);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        <div>
+            <div class="logo-area">JSS <span>INNOVATIONS</span></div>
+            <span class="sub-tag">Process Systems & Infrastructure Engineering</span>
+        </div>
+        <div style="text-align: right; font-size: 0.9rem; font-weight: 600; color: var(--primary-color);">
+            🏢 CIPC COMPLIEMT | 📈 B-BBEE Level 1
+        </div>
+    </div>
+
+    <nav>
+        <!-- Mobile Invisible Toggle Checkbox -->
+        <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+        
+        <!-- The 3-Line Hamburger Button -->
+        <label for="menu-toggle" class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li>
+                <a href="#">Our Business ▾</a>
+                <ul class="dropdown">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="team.html">Our Team (Board)</a></li>
+                    <li><a href="certificates.html">Certificates & Quality</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Our Offering ▾</a>
+                <ul class="dropdown">
+                    <li><a href="civils.html">General Construction & Civils</a></li>
+                    <li><a href="water.html">Water & Effluent Solutions</a></li>
+                    <li><a href="lab.html">Quality & Lab Compliance</a></li>
+                </ul>
+            </li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="terms.html">Terms & Conditions</a></li>
+        </ul>
+    </nav>
+
+    <header id="home">
+        <h1>Engineering the Future with Precision</h1>
+        <p>Providing multi-sector industrial solutions across civil infrastructure, mechanical fluids management, and technical regulatory compliance frameworks.</p>
+    </header>
+
+    <section class="container" style="padding-bottom: 1rem;">
+        <div class="vision-box">
+            <h3>Our Strategic Vision</h3>
+            <p style="font-size: 1.1rem; color: var(--text-dark); font-weight: 400;">
+                To become South Africa's most precise multi-disciplinary contractor by deploying scientific process controls and engineering excellence to public infrastructure and commercial production assets.
+            </p>
+            
+            <div class="idea-grid">
+                <div class="idea-pillar">
+                    <h4>The Business Idea</h4>
+                    <p style="font-size: 0.9rem;">Bridging the gap between traditional civil contracting and highly technical process engineering to offer public and private sectors an all-in-one execution partner.</p>
+                </div>
+                <div class="idea-pillar">
+                    <h4>Resource Circularity</h4>
+                    <p style="font-size: 0.9rem;">Optimizing industrial spaces with a focus on advanced water recovery, maximizing process fluid lifecycles, and mitigating environmental impact footprints.</p>
+                </div>
+                <div class="idea-pillar">
+                    <h4>Empowered Precision</h4>
+                    <p style="font-size: 0.9rem;">Leveraging an agile, 100% black-owned Level 1 B-BBEE framework built entirely on verified standard operating safety and technical testing metrics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="offerings" class="container" style="padding-top: 1rem;">
+        <h2 class="section-title">Our Key Enterprise Offerings</h2>
+        <div class="sector-grid">
+            
+            <a href="civils.html" class="sector-card">
+                <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=600&q=80" alt="Civil Works Infrastructure" class="sector-img">
+                <div class="sector-content">
+                    <h3>General Construction & Civils</h3>
+                    <p>Executing structural projects, active site management, and infrastructural installations built safely to specialized mechanical and civil layouts.</p>
+                </div>
+            </a>
+
+            <a href="water.html" class="sector-card">
+                <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80" alt="Effluent Treatment Plant Engineering" class="sector-img">
+                <div class="sector-content">
+                    <h3>Water & Effluent Solutions</h3>
+                    <p>Specialized engineering of active plant hydraulics, high-capacity effluent treatment utilities, fluid separation architectures, and strict ecological compliance.</p>
+                </div>
+            </a>
+
+            <a href="lab.html" class="sector-card">
+                <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=600&q=80" alt="Quality Operations Control" class="sector-img">
+                <div class="sector-content">
+                    <h3>Quality & Lab Compliance</h3>
+                    <p>Setting standard operating workflows, laboratory parameter logs, quality auditing strategies, and high-precision technical testing oversight.</p>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+    <section id="directors" style="background-color: #fff;">
+        <div class="container">
+            <h2 class="section-title">Board of Directors</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem; text-align: center;">
+                <div style="background: var(--bg-light); padding: 2rem; border-radius: 6px; border-top: 3px solid var(--brand-red);">
+                    <h3 style="color: var(--primary-color);">Sinethemba Galawe</h3>
+                    <p style="color: var(--brand-red); font-weight: bold; font-size: 0.85rem; text-transform: uppercase; margin-top: 5px;">Managing Director</p>
+                </div>
+                <div style="background: var(--bg-light); padding: 2rem; border-radius: 6px; border-top: 3px solid var(--brand-red);">
+                    <h3 style="color: var(--primary-color);">Jacob Boys Koloane</h3>
+                    <p style="color: var(--brand-red); font-weight: bold; font-size: 0.85rem; text-transform: uppercase; margin-top: 5px;">Executive Director</p>
+                </div>
+                <div style="background: var(--bg-light); padding: 2rem; border-radius: 6px; border-top: 3px solid var(--brand-red);">
+                    <h3 style="color: var(--primary-color);">Sizwe Makhwelo</h3>
+                    <p style="color: var(--brand-red); font-weight: bold; font-size: 0.85rem; text-transform: uppercase; margin-top: 5px;">Executive Director</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="container">
+        <h2 class="section-title">Contact Us</h2>
+        <div style="max-width: 650px; margin: 0 auto; background: #fff; padding: 2.5rem; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+            
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <p style="font-weight: bold; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 0.3rem;">Inquiries & Tenders</p>
+                <p style="font-size: 1rem; color: var(--brand-red); font-weight: bold;">info@jssinnovations.co.za</p>
+                
+                <div class="social-container">
+                    <a href="#facebook" class="social-btn" title="Facebook">f</a>
+                    <a href="#instagram" class="social-btn" title="Instagram">📸</a>
+                    <a href="#twitter" class="social-btn" title="X / Twitter">𝕏</a>
+                </div>
+            </div>
+
+            <form onsubmit="alert('Thank you for contacting JSS INNOVATIONS.'); return false;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.2rem;">
+                    <div>
+                        <label style="display:block; font-weight:bold; margin-bottom:0.4rem; font-size:0.85rem;">Your Name</label>
+                        <input type="text" required style="width:100%; padding:0.75rem; border:1px solid #cbd5e1; border-radius:4px;">
+                    </div>
+                    <div>
+                        <label style="display:block; font-weight:bold; margin-bottom:0.4rem; font-size:0.85rem;">Your Surname</label>
+                        <input type="text" required style="width:100%; padding:0.75rem; border:1px solid #cbd5e1; border-radius:4px;">
+                    </div>
+                </div>
+                <div style="margin-bottom: 1.2rem;">
+                    <label style="display:block; font-weight:bold; margin-bottom:0.4rem; font-size:0.85rem;">Email Address</label>
+                    <input type="email" required style="width:100%; padding:0.75rem; border:1px solid #cbd5e1; border-radius:4px;">
+                </div>
+                <div style="margin-bottom: 1.2rem;">
+                    <label style="display:block; font-weight:bold; margin-bottom:0.4rem; font-size:0.85rem;">Company Name</label>
+                    <input type="text" style="width:100%; padding:0.75rem; border:1px solid #cbd5e1; border-radius:4px;">
+                </div>
+                <div style="margin-bottom: 1.2rem;">
+                    <label style="display:block; font-weight:bold; margin-bottom:0.4rem; font-size:0.85rem;">Phone Number</label>
+                    <input type="text" style="width:100%; padding:0.75rem; border:1px solid #cbd5e1; border-radius:4px;">
+                </div>
+                <div style="margin-bottom: 1.2rem;">
+                    <label style="display:block; font-weight:bold; margin-bottom:0.4rem; font-size:0.85rem;">Message Title</label>
+                    <input type="text" required style="width:100%; padding:0.75rem; border:1px solid #cbd5e1; border-radius:4px;">
+                </div>
+                <div style="margin-bottom: 1.5rem;">
+                    <label style="display:block; font-weight:bold; margin-bottom:0.4rem; font-size:0.85rem;">Your Message</label>
+                    <textarea rows="5" required style="width:100%; padding:0.75rem; border:1px solid #cbd5e1; border-radius:4px; resize: none;"></textarea>
+                </div>
+                <button type="submit" style="width:100%; padding:0.9rem; background:var(--brand-red); color:#fff; border:none; font-weight:bold; border-radius:4px; cursor:pointer; text-transform:uppercase; letter-spacing:1px;">Send Message &rarr;</button>
+            </form>
+        </div>
+    </section>
+
+    <footer id="compliance">
+        <div class="footer-compliance">
+            <div class="cert-stamp">QUALITY<span>ISO 9001</span></div>
+            <div class="cert-stamp">ENVIRON<span>ISO 14001</span></div>
+            <div class="cert-stamp">SAFETY<span>ISO 45001</span></div>
+            
+            <div class="association-logo">MEMBER OF SAFCEC</div>
+            <div class="association-logo">SAQI COMPLIANT</div>
+        </div>
+        
+        <div class="footer-details">
+            <p style="color: #f1f5f9; font-weight: bold; margin-bottom: 0.5rem;">JSS INNOVATIONS (PTY) LTD</p>
+            <p><strong>Registered Address:</strong> 17150 Geba Street, Kagiso, Krugersdorp, Gauteng, 1754</p>
+            <p><strong>Corporate Registration:</strong> 2026/534174/07 | <strong>Income Tax No:</strong> 9688212209</p>
+            <p style="margin-top: 1rem;">
+                <a href="terms.html" style="color: var(--brand-red); cursor: pointer; text-decoration: underline; font-weight: 600;">Terms & Conditions</a>
+            </p>
+            <p style="margin-top: 2rem; color: #475569; font-size: 0.8rem;">&copy; 2026 JSS INNOVATIONS. All rights reserved. Built for Industry Optimization.</p>
+        </div>
+    </footer>
+</body>
+</html>
