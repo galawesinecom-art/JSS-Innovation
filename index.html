@@ -7,67 +7,216 @@
     <title>JSS INNOVATIONS (PTY) LTD</title>
     <style>
         /* Reset and Multi-Sector Variables */
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        :root { --primary-color: #0f172a; --brand-red: #ce1212; --text-dark: #334155; --bg-light: #f8fafc; --white: #ffffff; }
-        body { background-color: var(--bg-light); color: var(--text-dark); line-height: 1.6; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        :root {
+            --primary-color: #0f172a;  /* Heavy Industrial Navy */
+            --brand-red: #ce1212;     /* Corporate Crimson Accent */
+            --text-dark: #334155;
+            --bg-light: #f8fafc;
+            --white: #ffffff;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
 
         /* Top Brand Header Bar */
-        .top-bar { background-color: var(--white); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 4px solid var(--brand-red); }
-        .top-bar .logo-area { font-size: 1.6rem; font-weight: 900; letter-spacing: 1px; color: var(--primary-color); display: flex; align-items: center; }
-        .top-bar .logo-area span { color: var(--brand-red); }
-        .top-bar .sub-tag { font-size: 0.75rem; display: block; text-transform: uppercase; font-weight: bold; color: #64748b; letter-spacing: 2px; margin-top: 2px; }
+        .top-bar {
+            background-color: var(--white);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 4px solid var(--brand-red);
+        }
+
+        .top-bar .logo-area {
+            font-size: 1.6rem;
+            font-weight: 900;
+            letter-spacing: 1px;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+        }
+
+        .top-bar .logo-area span {
+            color: var(--brand-red);
+        }
+
+        .top-bar .sub-tag {
+            font-size: 0.75rem;
+            display: block;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #64748b;
+            letter-spacing: 2px;
+            margin-top: 2px;
+        }
 
         /* Structured Navigation Menu */
-        nav { background-color: var(--primary-color); position: sticky; top: 0; z-index: 100; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); width: 100%; }
+        nav {
+            background-color: var(--primary-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+            width: 100%;
+        }
+
         .menu-checkbox { display: none; }
-        .menu-icon { display: none; cursor: pointer; padding: 15px; color: white; font-weight: bold; }
-        nav ul { display: flex; list-style: none; max-width: 1200px; margin: 0 auto; width: 100%; }
+
+        .menu-icon {
+            display: none;
+            cursor: pointer;
+            padding: 15px;
+            color: white;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
         nav ul li { position: relative; }
-        nav ul li a { display: block; padding: 1.2rem 1.5rem; color: #f1f5f9; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: all 0.3s; }
-        nav ul li a:hover, nav ul li:hover > a { background-color: var(--brand-red); color: var(--white); }
-        .dropdown { display: none; position: absolute; top: 100%; left: 0; background-color: var(--white); min-width: 260px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-top: 3px solid var(--brand-red); z-index: 200; }
-        .dropdown li a { color: var(--primary-color); padding: 0.9rem 1.2rem; border-bottom: 1px solid #e2e8f0; font-size: 0.9rem; }
+
+        nav ul li a {
+            display: block;
+            padding: 1.2rem 1.5rem;
+            color: #f1f5f9;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+        }
+
+        nav ul li a:hover, nav ul li:hover > a {
+            background-color: var(--brand-red);
+            color: var(--white);
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: var(--white);
+            min-width: 260px;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+            border-top: 3px solid var(--brand-red);
+            z-index: 200;
+        }
+
+        .dropdown li a {
+            color: var(--primary-color);
+            padding: 0.9rem 1.2rem;
+            border-bottom: 1px solid #e2e8f0;
+            font-size: 0.9rem;
+        }
+
         nav ul li:hover .dropdown { display: block; }
 
-        header { background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.95)), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover; color: var(--white); height: 50vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 1.5rem; }
-        header h1 { font-size: 2.6rem; margin-bottom: 1rem; font-weight: 800; letter-spacing: 1px; }
-        header p { font-size: 1.2rem; max-width: 800px; color: #cbd5e1; font-weight: 300; }
+        header {
+            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.95)), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            color: var(--white);
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 1.5rem;
+        }
 
-        /* Contact Form Styles Added */
+        /* Contact Form CSS */
         .contact-section { background: #e2e8f0; padding: 4rem 2rem; }
         .form-container { max-width: 600px; margin: 0 auto; background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
         .form-group { margin-bottom: 1.5rem; }
-        .form-group input, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 4px; margin-top: 5px; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: 600; }
+        .form-group input, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 4px; }
         .submit-btn { background: var(--brand-red); color: white; border: none; padding: 1rem 2rem; border-radius: 4px; cursor: pointer; font-weight: bold; width: 100%; }
 
-        /* Footer and Misc Styles */
-        .container { max-width: 1200px; margin: 0 auto; padding: 4rem 1.5rem; }
-        h2.section-title { font-size: 2rem; text-align: center; margin-bottom: 3rem; color: var(--primary-color); text-transform: uppercase; position: relative; }
-        h2.section-title::after { content: ''; display: block; width: 80px; height: 4px; background-color: var(--brand-red); margin: 10px auto 0 auto; }
-        .vision-box { background: var(--white); padding: 3rem 2rem; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); border-left: 6px solid var(--brand-red); margin-bottom: 4rem; }
-        .idea-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
-        .idea-pillar { background: var(--bg-light); padding: 1.5rem; border-radius: 6px; border-top: 3px solid var(--primary-color); }
-        .sector-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-        .sector-card { background: var(--white); border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); border-bottom: 4px solid #cbd5e1; transition: transform 0.3s; text-decoration: none; color: inherit; display: block; }
-        .sector-card:hover { transform: translateY(-5px); border-bottom-color: var(--brand-red); }
-        .sector-img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
-        .sector-content { padding: 1.5rem; }
-        footer { background-color: #0b0f19; color: #94a3b8; padding: 4rem 2rem 2rem 2rem; text-align: center; border-top: 5px solid var(--brand-red); }
+        .social-icons { margin-bottom: 2rem; }
+        .social-icons a { color: #fff; margin: 0 15px; font-size: 1.8rem; transition: 0.3s; }
+        .social-icons a:hover { color: var(--brand-red); }
+
         .footer-compliance { max-width: 1000px; margin: 0 auto 3rem auto; display: flex; justify-content: space-around; flex-wrap: wrap; gap: 2rem; border-bottom: 1px solid #1e293b; padding-bottom: 3rem; }
+
         .cert-stamp { border: 2px solid #334155; padding: 1rem; border-radius: 50%; width: 110px; height: 110px; display: flex; flex-direction: column; justify-content: center; align-items: center; font-size: 0.7rem; font-weight: bold; color: #f1f5f9; background-color: #111827; }
+
         .cert-stamp span { color: var(--brand-red); font-size: 0.85rem; margin-top: 2px; }
+
         .association-logo { font-weight: 800; color: #cbd5e1; border-left: 3px solid var(--brand-red); padding-left: 10px; font-size: 1.1rem; letter-spacing: 1px; }
+
         .footer-details { font-size: 0.85rem; line-height: 1.8; }
 
         @media (max-width: 768px) {
             .top-bar { flex-direction: column; text-align: center; gap: 0.75rem; padding: 1rem; }
             .menu-icon { display: block; cursor: pointer; }
-            nav ul { display: none; flex-direction: column; position: static; width: 100%; background-color: #111827; border-top: 3px solid var(--brand-red); }
+            
+            nav ul { 
+                display: none; 
+                flex-direction: column; 
+                position: static; 
+                width: 100%; 
+                background-color: #111827; 
+                border-top: 3px solid var(--brand-red); 
+            }
             .menu-checkbox:checked ~ ul { display: flex !important; }
+            
             .dropdown { position: static; box-shadow: none; display: none; background: #1e293b; border-top: none; }
             .dropdown li a { color: #f1f5f9; border-bottom: 1px solid #334155; }
+            
             nav ul li:focus-within .dropdown { display: block; }
         }
+        header h1 { font-size: 2.6rem; margin-bottom: 1rem; font-weight: 800; letter-spacing: 1px; }
+
+        header p { font-size: 1.2rem; max-width: 800px; color: #cbd5e1; font-weight: 300; }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 4rem 1.5rem; }
+
+        h2.section-title { font-size: 2rem; text-align: center; margin-bottom: 3rem; color: var(--primary-color); text-transform: uppercase; position: relative; }
+
+        h2.section-title::after { content: ''; display: block; width: 80px; height: 4px; background-color: var(--brand-red); margin: 10px auto 0 auto; }
+
+        .vision-box { background: var(--white); padding: 3rem 2rem; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); border-left: 6px solid var(--brand-red); margin-bottom: 4rem; }
+
+        .idea-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+
+        .idea-pillar { background: var(--bg-light); padding: 1.5rem; border-radius: 6px; border-top: 3px solid var(--primary-color); }
+
+        .sector-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+
+        .sector-card { background: var(--white); border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); border-bottom: 4px solid #cbd5e1; transition: transform 0.3s; text-decoration: none; color: inherit; display: block; }
+
+        .sector-card:hover { transform: translateY(-5px); border-bottom-color: var(--brand-red); }
+
+        .sector-img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
+
+        .sector-content { padding: 1.5rem; }
+
+        footer { background-color: #0b0f19; color: #94a3b8; padding: 4rem 2rem 2rem 2rem; text-align: center; border-top: 5px solid var(--brand-red); }
+
+        .footer-compliance { max-width: 1000px; margin: 0 auto 3rem auto; display: flex; justify-content: space-around; flex-wrap: wrap; gap: 2rem; border-bottom: 1px solid #1e293b; padding-bottom: 3rem; }
+
+        .cert-stamp { border: 2px solid #334155; padding: 1rem; border-radius: 50%; width: 110px; height: 110px; display: flex; flex-direction: column; justify-content: center; align-items: center; font-size: 0.7rem; font-weight: bold; color: #f1f5f9; background-color: #111827; }
+
+        .cert-stamp span { color: var(--brand-red); font-size: 0.85rem; margin-top: 2px; }
+
+        .association-logo { font-weight: 800; color: #cbd5e1; border-left: 3px solid var(--brand-red); padding-left: 10px; font-size: 1.1rem; letter-spacing: 1px; }
+
+        .footer-details { font-size: 0.85rem; line-height: 1.8; }
     </style>
 </head>
 <body>
@@ -164,14 +313,22 @@
         </div>
     </section>
 
-    <!-- NEW CONTACT SECTION -->
     <section id="contact-form" class="contact-section">
         <div class="form-container">
-            <h2 style="margin-bottom: 1.5rem; text-align: center;">Get In Touch</h2>
+            <h2 class="section-title" style="margin-bottom: 2rem;">Get In Touch</h2>
             <form action="https://formspree.io/f/YOUR_UNIQUE_ID" method="POST">
-                <div class="form-group"><label>Name</label><input type="text" name="name" required></div>
-                <div class="form-group"><label>Email</label><input type="email" name="email" required></div>
-                <div class="form-group"><label>Message</label><textarea name="message" rows="5" required></textarea></div>
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea name="message" rows="5" required></textarea>
+                </div>
                 <button type="submit" class="submit-btn">SEND MESSAGE</button>
             </form>
         </div>
