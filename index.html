@@ -15,8 +15,8 @@
         }
         
         :root {
-            --primary-color: #0f172a;  /* Heavy Industrial Navy */
-            --brand-red: #ce1212;     /* Corporate Crimson Accent */
+            --primary-color: #0f172a;
+            --brand-red: #ce1212;
             --text-dark: #334155;
             --bg-light: #f8fafc;
             --white: #ffffff;
@@ -162,10 +162,6 @@
 
         .sector-content { padding: 1.5rem; }
 
-        .social-container { display: flex; gap: 1rem; margin-top: 1rem; justify-content: center; }
-
-        .social-btn { display: inline-flex; justify-content: center; align-items: center; width: 42px; height: 42px; background-color: var(--brand-red); color: var(--white); border-radius: 4px; text-decoration: none; font-weight: bold; }
-
         footer { background-color: #0b0f19; color: #94a3b8; padding: 4rem 2rem 2rem 2rem; text-align: center; border-top: 5px solid var(--brand-red); }
 
         .footer-compliance { max-width: 1000px; margin: 0 auto 3rem auto; display: flex; justify-content: space-around; flex-wrap: wrap; gap: 2rem; border-bottom: 1px solid #1e293b; padding-bottom: 3rem; }
@@ -182,7 +178,16 @@
             .top-bar { flex-direction: column; text-align: center; gap: 0.75rem; padding: 1rem; }
             .menu-icon { display: flex; flex-direction: column; justify-content: space-between; width: 30px; height: 20px; position: absolute; top: 15px; right: 20px; z-index: 150; }
             .menu-icon span { display: block; height: 3px; width: 100%; background-color: #ffffff !important; border-radius: 2px; transition: all 0.3s ease; }
-            nav ul { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background-color: #111827; border-top: 3px solid var(--brand-red); }
+            
+            /* FIXED MOBILE NAVIGATION STYLING */
+            nav ul { 
+                display: none; 
+                flex-direction: column; 
+                position: relative; /* Now pushes content down instead of overlapping */
+                width: 100%; 
+                background-color: #111827; 
+                border-top: 3px solid var(--brand-red); 
+            }
             .menu-checkbox:checked ~ ul { display: flex !important; }
         }
     </style>
