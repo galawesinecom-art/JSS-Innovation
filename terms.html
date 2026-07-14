@@ -16,15 +16,9 @@
         .top-bar .sub-tag { font-size: 0.75rem; display: block; text-transform: uppercase; font-weight: bold; color: #64748b; letter-spacing: 2px; }
         
         nav { background-color: var(--primary-color); position: sticky; top: 0; z-index: 100; width: 100%; }
-        .menu-checkbox { display: none; }
-        .menu-icon { display: none; cursor: pointer; }
         nav ul { display: flex; list-style: none; max-width: 1200px; margin: 0 auto; width: 100%; }
-        nav ul li { position: relative; }
         nav ul li a { display: block; padding: 1.2rem 1.5rem; color: #f1f5f9; text-decoration: none; font-weight: 600; font-size: 0.95rem; }
         nav ul li a:hover { background-color: var(--brand-red); }
-        .dropdown { display: none; position: absolute; top: 100%; left: 0; background-color: var(--white); min-width: 260px; border-top: 3px solid var(--brand-red); box-shadow: 0 10px 15px rgba(0,0,0,0.1); }
-        .dropdown li a { color: var(--primary-color); border-bottom: 1px solid #e2e8f0; }
-        nav ul li:hover .dropdown { display: block; }
 
         .page-hero { background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.95)), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover; color: var(--white); padding: 5rem 1.5rem; text-align: center; }
         .container { max-width: 900px; margin: 0 auto; padding: 4rem 1.5rem; }
@@ -34,17 +28,6 @@
         .terms-box p { font-size: 0.95rem; margin-bottom: 1rem; color: #475569; }
         
         footer { background-color: #0b0f19; color: #94a3b8; padding: 3rem 2rem; text-align: center; border-top: 5px solid var(--brand-red); margin-top: 5rem; }
-
-        @media (max-width: 768px) {
-            .top-bar { flex-direction: column; text-align: center; gap: 0.75rem; }
-            nav { position: relative; min-height: 50px; }
-            .menu-icon { display: flex; flex-direction: column; justify-content: space-between; width: 30px; height: 20px; position: absolute; top: 15px; right: 20px; }
-            .menu-icon span { display: block; height: 3px; width: 100%; background-color: #fff; }
-            nav ul { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; background-color: #111827; }
-            .dropdown { position: relative; display: block; background-color: #1e293b; box-shadow: none; }
-            .dropdown li a { color: #cbd5e1; padding-left: 2.5rem; }
-            .menu-checkbox:checked ~ ul { display: flex; }
-        }
     </style>
 </head>
 <body>
@@ -53,27 +36,12 @@
             <div class="logo-area">JSS <span>INNOVATIONS</span></div>
             <span class="sub-tag">Process Systems & Infrastructure Engineering</span>
         </div>
-        <div style="font-size: 0.9rem; font-weight: 600; color: var(--primary-color);">🏢 CIPC COMPLIENT</div>
+        <div style="font-size: 0.9rem; font-weight: 600; color: var(--primary-color);">🏢 CIPC COMPLIANT</div>
     </div>
 
     <nav>
-        <input type="checkbox" id="menu-toggle" class="menu-checkbox">
-        <label for="menu-toggle" class="menu-icon"><span></span><span></span><span></span></label>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="#">Our Business ▾</a>
-                <ul class="dropdown">
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="team.html">Our Team</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Our Offering ▾</a>
-                <ul class="dropdown">
-                    <li><a href="civils.html">General Construction & Civils</a></li>
-                    <li><a href="water.html">Water & Effluent Solutions</a></li>
-                    <li><a href="lab.html">Quality & Lab Compliance</a></li>
-                </ul>
-            </li>
             <li><a href="index.html#contact">Contact Us</a></li>
         </ul>
     </nav>
@@ -84,6 +52,12 @@
     </div>
 
     <div class="container">
+        <!-- Legal Identity Section -->
+        <div class="terms-box">
+            <h3>Corporate Identity (ECTA Compliance)</h3>
+            <p>JSS INNOVATIONS (PTY) LTD (Registration Number: 2026/534174/07) is a registered private company in South Africa[span_0](start_span)[span_0](end_span). Physical operations are headquartered at 17150 Geba Street, Kagiso, Krugersdorp, Gauteng, 1754.</p>
+        </div>
+
         <div class="terms-box">
             <h3>1. Professional Scope of Work</h3>
             <p>JSS INNOVATIONS (PTY) LTD provides contractual solutions across civil construction, fluid management architectures, and process safety auditing. All engineering project layouts, technical field services, and parameters are executed according to formal Service Level Agreements (SLAs).</p>
@@ -91,12 +65,22 @@
 
         <div class="terms-box">
             <h3>2. Regulatory & Safety Compliance</h3>
-            <p>Our infrastructure developments, structural assets, and site executions strictly respect standard operating procedures. Operations adhere tightly to South African industrial regulatory standards, ensuring alignment with framework metrics including ISO 9001, ISO 14001, and ISO 45001.</p>
+            <p>Our infrastructure developments, structural assets, and site executions strictly respect standard operating procedures. Operations adhere to South African industrial regulatory standards, ensuring alignment with framework metrics including ISO 9001, ISO 14001, and ISO 45001.</p>
         </div>
 
         <div class="terms-box">
-            <h3>3. Client Obligations & Data Logging</h3>
-            <p>Clients must guarantee safe site access for structural setup deployments and provide accurate equipment metric logs where required. JSS INNOVATIONS depends on verified site criteria to safely execute process treatment plant modifications and laboratory parameters auditing protocols.</p>
+            <h3>3. POPIA & Data Privacy</h3>
+            <p>In accordance with the <strong>Protection of Personal Information Act (POPIA)</strong>, JSS INNOVATIONS processes personal information solely for managing service inquiries and fulfilling contractual obligations[span_1](start_span)[span_1](end_span). We implement technical and organizational measures to ensure the security of your data.</p>
+        </div>
+
+        <div class="terms-box">
+            <h3>4. Limitation of Liability</h3>
+            <p>TO THE FULLEST EXTENT PERMITTED BY SOUTH AFRICAN LAW, JSS INNOVATIONS (PTY) LTD SHALL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL DAMAGES ARISING FROM THE USE OF THIS SITE OR THE RELIANCE ON INFORMATION PROVIDED HEREIN[span_2](start_span)[span_2](end_span).</p>
+        </div>
+
+        <div class="terms-box">
+            <h3>5. Dispute Resolution & Governing Law</h3>
+            <p>These terms are governed by the laws of the Republic of South Africa. Any disputes shall be resolved through good-faith negotiation, failing which, they will be subject to the exclusive jurisdiction of the South African courts.</p>
         </div>
     </div>
 
