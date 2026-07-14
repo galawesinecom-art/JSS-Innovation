@@ -15,8 +15,8 @@
         }
         
         :root {
-            --primary-color: #0f172a;
-            --brand-red: #ce1212;
+            --primary-color: #0f172a;  /* Heavy Industrial Navy */
+            --brand-red: #ce1212;     /* Corporate Crimson Accent */
             --text-dark: #334155;
             --bg-light: #f8fafc;
             --white: #ffffff;
@@ -76,6 +76,7 @@
         .menu-icon {
             display: none;
             cursor: pointer;
+            padding: 15px;
         }
 
         nav ul {
@@ -179,16 +180,19 @@
             .menu-icon { display: flex; flex-direction: column; justify-content: space-between; width: 30px; height: 20px; position: absolute; top: 15px; right: 20px; z-index: 150; }
             .menu-icon span { display: block; height: 3px; width: 100%; background-color: #ffffff !important; border-radius: 2px; transition: all 0.3s ease; }
             
-            /* FIXED MOBILE NAVIGATION STYLING */
             nav ul { 
                 display: none; 
                 flex-direction: column; 
-                position: relative; /* Now pushes content down instead of overlapping */
+                position: static; 
                 width: 100%; 
                 background-color: #111827; 
                 border-top: 3px solid var(--brand-red); 
             }
             .menu-checkbox:checked ~ ul { display: flex !important; }
+            
+            .dropdown { position: static; box-shadow: none; display: none; background: #1e293b; border-top: none; }
+            .dropdown li a { color: #f1f5f9; border-bottom: 1px solid #334155; }
+            nav ul li:active .dropdown, nav ul li:focus-within .dropdown { display: block; }
         }
     </style>
 </head>
