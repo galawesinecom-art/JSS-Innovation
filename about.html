@@ -8,9 +8,10 @@
 </head>
 <body>
 
-    <!-- Header Navigation -->
     <header>
-        <nav>
+        <div class="logo">JSS Innovations</div>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <nav id="nav-menu">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -20,10 +21,8 @@
         </nav>
     </header>
 
-    <main style="max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.6;">
-        
+    <main>
         <h1>About JSS Innovations</h1>
-
         <section>
             <h2>Our Roots: Built in Kagiso</h2>
             <p>JSS Innovations was born out of a deep connection to our home. Growing up in Kagiso, Krugersdorp, we have lived the reality of our community every day. We’ve seen the challenges firsthand—the struggle of unemployment, the limited access to opportunities, and the clear need for modern, upgraded infrastructure to support the growth of our people.</p>
@@ -59,12 +58,17 @@
             <h2>Let’s Work Together</h2>
             <p>We are proud of where we come from, and we are excited about where we are going. If you are looking for a partner who understands the value of hard work and technical precision, reach out to us today. We would love to discuss how JSS Innovations can contribute to your success.</p>
         </section>
-
     </main>
 
-    <footer>
-        <p>&copy; 2026 JSS Innovations. Built with purpose in Krugersdorp.</p>
-    </footer>
-
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("nav-menu");
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
+        }
+    </script>
 </body>
 </html>
