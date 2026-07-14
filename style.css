@@ -1,43 +1,30 @@
-/* General Reset */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+/* style.css - Master Design System */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+:root { --primary-color: #0f172a; --brand-red: #ce1212; --text-dark: #334155; --bg-light: #f8fafc; --white: #ffffff; }
+body { background-color: var(--bg-light); color: var(--text-dark); line-height: 1.6; }
 
-/* Header and Navigation */
-header { 
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-    padding: 1rem 2rem; 
-    background: #0056b3; 
-    color: white; 
+/* Header & Nav */
+.top-bar { background-color: var(--white); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 4px solid var(--brand-red); }
+.top-bar .logo-area { font-size: 1.6rem; font-weight: 900; color: var(--primary-color); }
+.top-bar .logo-area span { color: var(--brand-red); }
+.top-bar .sub-tag { font-size: 0.75rem; display: block; text-transform: uppercase; font-weight: bold; color: #64748b; letter-spacing: 2px; }
+
+nav { background-color: var(--primary-color); position: sticky; top: 0; z-index: 100; width: 100%; }
+.menu-checkbox { display: none; }
+.menu-icon { display: none; cursor: pointer; padding: 15px; color: white; font-weight: bold; }
+nav ul { display: flex; list-style: none; max-width: 1200px; margin: 0 auto; width: 100%; }
+nav ul li a { display: block; padding: 1.2rem 1.5rem; color: #f1f5f9; text-decoration: none; font-weight: 600; font-size: 0.95rem; }
+nav ul li a:hover { background-color: var(--brand-red); }
+
+/* Containers & Sections */
+.page-hero { background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.95)), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=80'); color: var(--white); padding: 5rem 1.5rem; text-align: center; }
+.container { max-width: 900px; margin: 0 auto; padding: 4rem 1.5rem; background: var(--white); border-radius: 6px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-top: 2rem; }
+h1, h2 { color: var(--primary-color); margin-bottom: 1.5rem; }
+footer { background-color: #0b0f19; color: #94a3b8; padding: 3rem 2rem; text-align: center; border-top: 5px solid var(--brand-red); margin-top: 5rem; }
+
+/* Mobile */
+@media (max-width: 768px) {
+    .menu-icon { display: block; }
+    nav ul { display: none; flex-direction: column; background: #111827; }
+    .menu-checkbox:checked ~ ul { display: flex; }
 }
-nav ul { list-style: none; display: flex; gap: 20px; }
-nav ul li a { color: white; text-decoration: none; font-weight: bold; }
-
-/* Hamburger Button (Hidden on Desktop) */
-.hamburger { display: none; font-size: 2rem; cursor: pointer; }
-
-/* Mobile View (Screens 600px and smaller) */
-@media (max-width: 600px) {
-    .hamburger { display: block; }
-    nav { 
-        display: none; 
-        width: 100%; 
-        position: absolute; 
-        top: 60px; 
-        left: 0; 
-        background: #0056b3; 
-    }
-    nav ul { 
-        flex-direction: column; 
-        text-align: center; 
-        padding: 20px; 
-    }
-    nav ul li { padding: 10px 0; }
-}
-
-/* Main Content Styling */
-main { padding: 20px; max-width: 800px; margin: 0 auto; }
-h1, h2 { color: #0056b3; margin-bottom: 15px; }
-p { margin-bottom: 15px; }
-ul { margin-left: 20px; margin-bottom: 15px; }
