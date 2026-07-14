@@ -3,49 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - JSS INNOVATIONS</title>
-    <style>
-        /* Shared Styles Architecture */
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
-        :root { --primary-color: #0f172a; --brand-red: #ce1212; --text-dark: #334155; --bg-light: #f8fafc; --white: #ffffff; }
-        body { background-color: var(--bg-light); color: var(--text-dark); line-height: 1.6; }
-        
-        .top-bar { background-color: var(--white); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 4px solid var(--brand-red); }
-        .top-bar .logo-area { font-size: 1.6rem; font-weight: 900; color: var(--primary-color); }
-        .top-bar .logo-area span { color: var(--brand-red); }
-        .top-bar .sub-tag { font-size: 0.75rem; display: block; text-transform: uppercase; font-weight: bold; color: #64748b; letter-spacing: 2px; }
-        
-        nav { background-color: var(--primary-color); position: sticky; top: 0; z-index: 100; width: 100%; }
-        .menu-checkbox { display: none; }
-        .menu-icon { display: none; cursor: pointer; }
-        nav ul { display: flex; list-style: none; max-width: 1200px; margin: 0 auto; width: 100%; }
-        nav ul li { position: relative; }
-        nav ul li a { display: block; padding: 1.2rem 1.5rem; color: #f1f5f9; text-decoration: none; font-weight: 600; font-size: 0.95rem; }
-        nav ul li a:hover { background-color: var(--brand-red); }
-        .dropdown { display: none; position: absolute; top: 100%; left: 0; background-color: var(--white); min-width: 260px; border-top: 3px solid var(--brand-red); box-shadow: 0 10px 15px rgba(0,0,0,0.1); }
-        .dropdown li a { color: var(--primary-color); border-bottom: 1px solid #e2e8f0; }
-        nav ul li:hover .dropdown { display: block; }
-
-        .page-hero { background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.95)), url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover; color: var(--white); padding: 5rem 1.5rem; text-align: center; }
-        .container { max-width: 800px; margin: 0 auto; padding: 4rem 1.5rem; background: var(--white); border-radius: 6px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-top: 2rem; }
-        
-        h1, h2 { color: var(--primary-color); margin-bottom: 1.5rem; }
-        p { margin-bottom: 1.5rem; }
-        ul { margin-left: 20px; margin-bottom: 1.5rem; }
-
-        footer { background-color: #0b0f19; color: #94a3b8; padding: 3rem 2rem; text-align: center; border-top: 5px solid var(--brand-red); margin-top: 5rem; }
-
-        @media (max-width: 768px) {
-            .top-bar { flex-direction: column; text-align: center; gap: 0.75rem; }
-            nav { position: relative; min-height: 50px; }
-            .menu-icon { display: flex; flex-direction: column; justify-content: space-between; width: 30px; height: 20px; position: absolute; top: 15px; right: 20px; }
-            .menu-icon span { display: block; height: 3px; width: 100%; background-color: #fff; }
-            nav ul { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; background-color: #111827; }
-            .dropdown { position: relative; display: block; background-color: #1e293b; box-shadow: none; }
-            .dropdown li a { color: #cbd5e1; padding-left: 2.5rem; }
-            .menu-checkbox:checked ~ ul { display: flex; }
-        }
-    </style>
+    <title>About JSS Innovations</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="top-bar">
@@ -53,60 +12,30 @@
             <div class="logo-area">JSS <span>INNOVATIONS</span></div>
             <span class="sub-tag">Process Systems & Infrastructure Engineering</span>
         </div>
-        <div style="font-size: 0.9rem; font-weight: 600; color: var(--primary-color);">🏢 Reg No: 2026/534174/07</div>
     </div>
 
     <nav>
         <input type="checkbox" id="menu-toggle" class="menu-checkbox">
-        <label for="menu-toggle" class="menu-icon"><span></span><span></span><span></span></label>
+        <label for="menu-toggle" class="menu-icon">☰ MENU</label>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="#">Our Business ▾</a>
-                <ul class="dropdown">
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="team.html">Our Team</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Our Offering ▾</a>
-                <ul class="dropdown">
-                    <li><a href="civils.html">General Construction & Civils</a></li>
-                    <li><a href="water.html">Water & Effluent Solutions</a></li>
-                    <li><a href="lab.html">Quality & Lab Compliance</a></li>
-                </ul>
-            </li>
-            <li><a href="index.html#contact">Contact Us</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="water.html">Water Solutions</a></li>
         </ul>
     </nav>
 
     <div class="page-hero">
         <h1>About JSS Innovations</h1>
-        <p style="margin-top: 1rem; color: #cbd5e1;">Building local expertise from Kagiso to the national stage.</p>
     </div>
 
     <div class="container">
         <h2>Our Roots: Built in Kagiso</h2>
-        <p>JSS Innovations was born out of a deep connection to our home. Growing up in Kagiso, Krugersdorp, we have lived the reality of our community every day. We’ve seen the challenges firsthand—the struggle of unemployment, the limited access to opportunities, and the clear need for modern, upgraded infrastructure to support the growth of our people.</p>
-        <p>But where others saw obstacles, we saw the potential for progress. We know that the talent, the drive, and the capacity for innovation are right here in our backyard. We are committed to turning that potential into tangible results.</p>
-
-        <h2>Our Mission</h2>
-        <p>Established on July 8, 2026, JSS Innovations is our answer to the challenges we see around us. We didn’t start this company just to provide a service; we started it to take an active, meaningful role in the economic development of our township and our country. We believe that by building a business rooted in excellence, we can contribute to the growth of Krugersdorp and create the kinds of opportunities we want to see for our community.</p>
-
-        <h2>What We Do</h2>
-        <p>We specialize in providing high-quality technical and industrial solutions, including laboratory analysis and industrial process optimization. We bring a technical, practical, and disciplined approach to every project we take on. Our goal is to provide services that help our clients operate more efficiently, while maintaining the highest standards of quality and integrity.</p>
-
-        <h2>Our Commitment</h2>
-        <ul>
-            <li><strong>Quality over shortcuts:</strong> Every project is an opportunity to build trust and demonstrate excellence.</li>
-            <li><strong>Infrastructure growth:</strong> We aim to support and develop the essential systems that keep our local industries moving.</li>
-            <li><strong>Community development:</strong> We believe that as our business grows, so should the opportunities for the people in our town.</li>
-        </ul>
-
-        <h2>Moving Forward</h2>
-        <p>We are just getting started, but our foundation is strong because it is built on the reality of our town and the ambition of our people. We have a clear understanding of the local landscape and the technical expertise to make a difference. Whether you are a local business or a larger partner, we are ready to bring our expertise, our work ethic, and our commitment to your next project.</p>
+        <p>JSS Innovations was born out of a deep connection to our home. Growing up in Kagiso, Krugersdorp, we have lived the reality of our community every day. We’ve seen the challenges firsthand—the struggle of unemployment, the limited access to opportunities, and the clear need for modern, upgraded infrastructure.</p>
+        <p>We are here to take an active, meaningful role in the economic development of our township and our country.</p>
     </div>
 
     <footer>
-        <p>&copy; 2026 JSS INNOVATIONS (PTY) LTD. All rights reserved.</p>
+        <p>&copy; 2026 JSS INNOVATIONS (PTY) LTD.</p>
     </footer>
 </body>
 </html>
