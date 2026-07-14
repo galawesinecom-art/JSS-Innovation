@@ -5,8 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JSS INNOVATIONS (PTY) LTD</title>
-    <!-- FontAwesome for Social Media Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         /* Reset and Multi-Sector Variables */
         * {
@@ -141,35 +139,7 @@
             padding: 0 1.5rem;
         }
 
-        header h1 { font-size: 2.6rem; margin-bottom: 1rem; font-weight: 800; letter-spacing: 1px; }
-
-        header p { font-size: 1.2rem; max-width: 800px; color: #cbd5e1; font-weight: 300; }
-
-        .container { max-width: 1200px; margin: 0 auto; padding: 4rem 1.5rem; }
-
-        h2.section-title { font-size: 2rem; text-align: center; margin-bottom: 3rem; color: var(--primary-color); text-transform: uppercase; position: relative; }
-
-        h2.section-title::after { content: ''; display: block; width: 80px; height: 4px; background-color: var(--brand-red); margin: 10px auto 0 auto; }
-
-        .vision-box { background: var(--white); padding: 3rem 2rem; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); border-left: 6px solid var(--brand-red); margin-bottom: 4rem; }
-
-        .idea-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
-
-        .idea-pillar { background: var(--bg-light); padding: 1.5rem; border-radius: 6px; border-top: 3px solid var(--primary-color); }
-
-        .sector-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-
-        .sector-card { background: var(--white); border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); border-bottom: 4px solid #cbd5e1; transition: transform 0.3s; text-decoration: none; color: inherit; display: block; }
-
-        .sector-card:hover { transform: translateY(-5px); border-bottom-color: var(--brand-red); }
-
-        .sector-img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
-
-        .sector-content { padding: 1.5rem; }
-
-        footer { background-color: #0b0f19; color: #94a3b8; padding: 4rem 2rem 2rem 2rem; text-align: center; border-top: 5px solid var(--brand-red); }
-
-        /* Social Icons */
+        Social Icons */
         .social-icons { margin-bottom: 2rem; }
         .social-icons a { color: #fff; margin: 0 15px; font-size: 1.8rem; transition: 0.3s; }
         .social-icons a:hover { color: var(--brand-red); }
@@ -201,6 +171,64 @@
             .dropdown { position: static; box-shadow: none; display: none; background: #1e293b; border-top: none; }
             .dropdown li a { color: #f1f5f9; border-bottom: 1px solid #334155; }
             
+            nav ul li:focus-within .dropdown { display: block; }
+        }
+        header h1 { font-size: 2.6rem; margin-bottom: 1rem; font-weight: 800; letter-spacing: 1px; }
+
+        header p { font-size: 1.2rem; max-width: 800px; color: #cbd5e1; font-weight: 300; }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 4rem 1.5rem; }
+
+        h2.section-title { font-size: 2rem; text-align: center; margin-bottom: 3rem; color: var(--primary-color); text-transform: uppercase; position: relative; }
+
+        h2.section-title::after { content: ''; display: block; width: 80px; height: 4px; background-color: var(--brand-red); margin: 10px auto 0 auto; }
+
+        .vision-box { background: var(--white); padding: 3rem 2rem; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); border-left: 6px solid var(--brand-red); margin-bottom: 4rem; }
+
+        .idea-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+
+        .idea-pillar { background: var(--bg-light); padding: 1.5rem; border-radius: 6px; border-top: 3px solid var(--primary-color); }
+
+        .sector-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+
+        .sector-card { background: var(--white); border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); border-bottom: 4px solid #cbd5e1; transition: transform 0.3s; text-decoration: none; color: inherit; display: block; }
+
+        .sector-card:hover { transform: translateY(-5px); border-bottom-color: var(--brand-red); }
+
+        .sector-img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
+
+        .sector-content { padding: 1.5rem; }
+
+        footer { background-color: #0b0f19; color: #94a3b8; padding: 4rem 2rem 2rem 2rem; text-align: center; border-top: 5px solid var(--brand-red); }
+
+        .footer-compliance { max-width: 1000px; margin: 0 auto 3rem auto; display: flex; justify-content: space-around; flex-wrap: wrap; gap: 2rem; border-bottom: 1px solid #1e293b; padding-bottom: 3rem; }
+
+        .cert-stamp { border: 2px solid #334155; padding: 1rem; border-radius: 50%; width: 110px; height: 110px; display: flex; flex-direction: column; justify-content: center; align-items: center; font-size: 0.7rem; font-weight: bold; color: #f1f5f9; background-color: #111827; }
+
+        .cert-stamp span { color: var(--brand-red); font-size: 0.85rem; margin-top: 2px; }
+
+        .association-logo { font-weight: 800; color: #cbd5e1; border-left: 3px solid var(--brand-red); padding-left: 10px; font-size: 1.1rem; letter-spacing: 1px; }
+
+        .footer-details { font-size: 0.85rem; line-height: 1.8; }
+
+        @media (max-width: 768px) {
+            .top-bar { flex-direction: column; text-align: center; gap: 0.75rem; padding: 1rem; }
+            .menu-icon { display: block; cursor: pointer; }
+            
+            nav ul { 
+                display: none; 
+                flex-direction: column; 
+                position: static; 
+                width: 100%; 
+                background-color: #111827; 
+                border-top: 3px solid var(--brand-red); 
+            }
+            .menu-checkbox:checked ~ ul { display: flex !important; }
+            
+            .dropdown { position: static; box-shadow: none; display: none; background: #1e293b; border-top: none; }
+            .dropdown li a { color: #f1f5f9; border-bottom: 1px solid #334155; }
+            
+            /* Enabled tap-to-open for mobile */
             nav ul li:focus-within .dropdown { display: block; }
         }
     </style>
@@ -239,7 +267,6 @@
                     <li><a href="lab.html">Quality & Lab Compliance</a></li>
                 </ul>
             </li>
-            <li><a href="projects.html">Projects</a></li>
             <li><a href="#contact">Contact Us</a></li>
             <li><a href="terms.html">Terms & Conditions</a></li>
         </ul>
@@ -300,14 +327,7 @@
         </div>
     </section>
 
-    <footer id="contact">
-        <!-- Social Media Section -->
-        <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-        </div>
-        
+    <footer id="compliance">
         <div class="footer-compliance">
             <div class="cert-stamp">QUALITY<span>ISO 9001</span></div>
             <div class="cert-stamp">ENVIRON<span>ISO 14001</span></div>
