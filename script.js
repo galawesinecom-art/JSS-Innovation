@@ -6,10 +6,13 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     /*=========================
-      Sticky Navigation
-    =========================*/
+      /*=========================
+  Sticky Navigation
+=========================*/
 
-    const nav = document.querySelector("nav");
+const nav = document.querySelector("nav");
+
+if (nav) {
 
     window.addEventListener("scroll", () => {
 
@@ -27,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 
-
+}
     /*=========================
       Mobile Menu
     =========================*/
