@@ -118,7 +118,45 @@ background:#fff;
 color:var(--primary);
 
 }
+/*=====================
+MOBILE NAVIGATION
+=====================*/
 
+@media(max-width:991px){
+
+.nav-links{
+
+display:none;
+position:absolute;
+top:90px;
+left:0;
+width:100%;
+background:#fff;
+flex-direction:column;
+align-items:center;
+gap:25px;
+padding:30px 0;
+box-shadow:0 10px 30px rgba(0,0,0,.15);
+
+}
+
+.nav-links.show-menu{
+
+display:flex;
+
+}
+
+.quote-btn{
+
+display:none;
+
+}
+
+.menu-btn{
+
+display:block;
+
+}
 /*=====================
 NAVIGATION
 =====================*/
@@ -1162,7 +1200,7 @@ footer ul li a:hover {
     }
 
 }
-}
+
 /*=========================================
 WHATSAPP BUTTON
 =========================================*/
@@ -1340,10 +1378,6 @@ bottom:20px;
 }
 
 }
-/* Mobile Menu */
-
-.show-menu
-
 /* Back To Top */
 
 .top-btn{
