@@ -1509,3 +1509,136 @@ background:#F7931E;
     text-transform:uppercase;
     letter-spacing:1px;
 }
+/* ==============================
+   PREMIUM SERVICES SECTION
+============================== */
+
+.services {
+    padding:90px 0;
+    background:#f8f8f8;
+}
+
+
+.section-header {
+    text-align:center;
+    max-width:750px;
+    margin:0 auto 50px;
+}
+
+
+.section-header span {
+
+    color:#d4af37;
+    font-weight:700;
+    letter-spacing:2px;
+    font-size:14px;
+
+}
+
+
+.section-header h2 {
+
+    font-size:38px;
+    margin:15px 0;
+    color:#111;
+
+}
+
+
+.section-header p {
+
+    color:#666;
+    line-height:1.8;
+
+}
+
+
+/* Service Grid */
+
+.service-grid {
+
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
+
+}
+
+
+/* Service Cards */
+
+.service-card {
+
+background:white;
+padding:40px 25px;
+text-align:center;
+border-radius:10px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+transition:0.4s;
+border-bottom:4px solid transparent;
+
+}
+
+
+.service-card:hover {
+
+transform:translateY(-12px);
+border-bottom:4px solid #d4af37;
+
+}
+
+
+.service-card i {
+
+font-size:45px;
+color:#d4af37;
+margin-bottom:25px;
+
+}
+
+
+.service-card h3 {
+
+font-size:22px;
+margin-bottom:15px;
+color:#111;
+
+}
+
+
+.service-card p {
+
+color:#666;
+line-height:1.7;
+font-size:15px;
+
+}
+
+
+/* Mobile */
+
+@media(max-width:1000px){
+
+.service-grid {
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+
+@media(max-width:600px){
+
+.service-grid {
+
+grid-template-columns:1fr;
+
+}
+
+.section-header h2 {
+
+font-size:30px;
+
+}
+
+}
