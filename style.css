@@ -1418,3 +1418,8 @@ visibility:visible;
 background:#F7931E;
 
 }
+/* About Page Hero */
+.about-hero{
+    height:60vh;
+    min-height:450px;
+}
