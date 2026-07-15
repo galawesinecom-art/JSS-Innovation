@@ -255,19 +255,16 @@ color:var(--primary);
 HERO
 =====================*/
 
-.hero{
+.about-hero{
+    height:50vh;
+    min-height:380px;
+    display:flex;
+    align-items:flex-end;
+}
 
-height:100vh;
-
-background:url("images/hero.jpg") center center/cover;
-
-position:relative;
-
-display:flex;
-
-align-items:center;
-
-color:#fff;
+.about-hero .hero-content{
+    padding-bottom:70px;
+}
 
 }
 
