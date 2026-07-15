@@ -1678,3 +1678,27 @@ FINAL MOBILE MENU FIX
     }
 
 }
+/* Desktop Navigation Fix */
+@media(min-width:992px){
+
+    .nav-links{
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        gap:35px;
+        position:static;
+        background:transparent;
+        width:auto;
+        padding:0;
+        box-shadow:none;
+    }
+
+    .menu-btn{
+        display:none;
+    }
+
+    .quote-btn{
+        display:inline-block;
+    }
+
+}
