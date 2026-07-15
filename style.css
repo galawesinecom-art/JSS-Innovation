@@ -122,46 +122,6 @@ color:var(--primary);
 MOBILE NAVIGATION
 =====================*/
 
-@media(max-width:991px){
-
-.nav-container{
-    height:80px;
-}
-
-.nav-links{
-
-    display:none;
-    position:absolute;
-    top:80px;
-    left:0;
-    width:100%;
-    background:#fff;
-    flex-direction:column;
-    align-items:center;
-    gap:20px;
-    padding:30px 0;
-    box-shadow:0 10px 30px rgba(0,0,0,.15);
-
-}
-
-.nav-links.show-menu{
-
-    display:flex;
-
-}
-
-.quote-btn{
-
-    display:none;
-
-}
-
-.menu-btn{
-
-    display:block;
-
-}
-} 
 /*=====================
 NAVIGATION
 =====================*/
