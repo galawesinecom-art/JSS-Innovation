@@ -1233,26 +1233,6 @@ grid-template-columns:1fr;
 
 }
 
-.nav-links{
-
-display:none;
-
-}
-
-.quote-btn{
-
-display:none;
-
-}
-
-.menu-btn{
-
-display:block;
-
-}
-
-}
-
 @media(max-width:768px){
 
 .hero{
@@ -1362,27 +1342,7 @@ bottom:20px;
 }
 /* Mobile Menu */
 
-.show-menu{
-
-display:flex !important;
-
-flex-direction:column;
-
-position:absolute;
-
-top:90px;
-
-left:0;
-
-width:100%;
-
-background:#fff;
-
-padding:20px;
-
-box-shadow:0 10px 30px rgba(0,0,0,.15);
-
-}
+.show-menu
 
 /* Back To Top */
 
