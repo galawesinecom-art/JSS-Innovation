@@ -1662,3 +1662,90 @@ FINAL MOBILE MENU FIX
     }
 
 }
+/* ================= PREMIUM CONTACT FORM ================= */
+
+.contact-form{
+background:#ffffff;
+padding:40px;
+border-radius:15px;
+box-shadow:0 15px 40px rgba(0,0,0,0.10);
+}
+
+.form-group{
+margin-bottom:20px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea{
+
+width:100%;
+padding:15px 18px;
+border:1px solid #ddd;
+border-radius:8px;
+font-family:'Poppins',sans-serif;
+font-size:15px;
+outline:none;
+transition:0.3s;
+box-sizing:border-box;
+
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus{
+
+border-color:#F7931E;
+box-shadow:0 0 8px rgba(247,147,30,0.25);
+
+}
+
+
+.contact-form textarea{
+
+resize:none;
+
+}
+
+
+.contact-form button{
+
+width:100%;
+border:none;
+cursor:pointer;
+font-size:16px;
+
+}
+
+
+/* RIGHT SIDE INFO */
+
+.contact-info{
+
+background:#0B1F3A;
+color:white;
+padding:40px;
+border-radius:15px;
+
+}
+
+.contact-info h3{
+
+font-size:28px;
+margin-bottom:20px;
+
+}
+
+.contact-info ul{
+
+padding:0;
+list-style:none;
+line-height:2.2;
+
+}
+
+.contact-info li{
+
+font-size:16px;
+
+}
