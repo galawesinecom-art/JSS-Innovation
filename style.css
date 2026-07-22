@@ -1762,3 +1762,83 @@ line-height:2.2;
 font-size:16px;
 
 }
+/* ===============================
+PREMIUM CONTACT SECTION LAYOUT
+================================ */
+
+.contact-form,
+.contact-info{
+
+height:100%;
+}
+
+
+.contact-info{
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+
+}
+
+
+.contact-info p{
+
+color:#e5e7eb;
+line-height:1.8;
+
+}
+
+
+.contact-info li{
+
+margin-bottom:8px;
+
+}
+
+
+/* Contact Section Background */
+
+.services .contact-grid{
+
+align-items:stretch;
+
+}
+
+
+/* Premium Contact Cards Hover */
+
+.contact-form:hover,
+.contact-info:hover{
+
+transform:translateY(-5px);
+transition:.3s;
+
+}
+
+
+/* Mobile Contact Fix */
+
+@media(max-width:768px){
+
+.contact-form{
+
+padding:25px;
+
+}
+
+
+.contact-info{
+
+padding:30px;
+
+}
+
+
+.contact-info h3{
+
+font-size:22px;
+
+}
+
+}
