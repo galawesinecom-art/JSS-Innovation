@@ -1920,3 +1920,12 @@ font-size:15px;
 }
 
 }
+    /* Compliance Logos */
+
+.compliance-logo{
+    width:90px;
+    height:90px;
+    object-fit:contain;
+    display:block;
+    margin:0 auto 20px;
+} 
